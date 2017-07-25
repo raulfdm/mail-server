@@ -1,7 +1,11 @@
 {
   "name": "send-mail",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "author": "Raul Felipe de Melo <melo.raulf@gmail.com>",
+  "engines": {
+    "node": "8.1.4"
+  },
   "license": "MIT",
   "scripts": {
     "start": "yarn nodemon src/index.js",
@@ -12,9 +16,7 @@
     "body-parser": "^1.17.2",
     "consign": "^0.1.6",
     "express": "^4.15.3",
-    "nodemailer": "^4.0.1"
-  },
-  "devDependencies": {
+    "nodemailer": "^4.0.1",
     "nodemon": "^1.11.0"
   }
 }
