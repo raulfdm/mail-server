@@ -23,11 +23,15 @@ const callMailService = (req, res) => {
         )
 
         sendMail(mailToBeSent.mailConfigFormat())
-            .then(succ => res.status(200).send(succ))
-            .catch(err => res.status(500).send(err))
+            .then(success => res.status(200).json({
+                success
+            }))
+            .catch(error => res.status(500).json({
+                error
+            }))
 
     } else {
-        res.status(400).json(validation)
+        res.status(400).json({error: validation})
     }
 
 }
