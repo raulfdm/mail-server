@@ -1,6 +1,6 @@
 module.exports = {
     service: 'gmail',
-    user: 'devtesteapps@gmail.com',
-    pass: 'teste123123',
+    user: 'melo.raulf@gmail.com',
+    pass: 'vxtinxqacuuwlnds',
     mailTo: 'melo.raulf@gmail.com'
 }
