@@ -18,7 +18,8 @@ const callMailService = (req, res) => {
         const mailToBeSent = new mailInfos(
             req.body.from,
             req.body.subject,
-            req.body.message
+            req.body.message,
+            req.body.name
         )
 
         sendMail(mailToBeSent.mailConfigFormat())
@@ -46,9 +47,13 @@ const sendMail = mailOptions => {
 const checkParameters = body => {
     let error = ""
     if (!body.from)
-        error = "Subject is required"
+        error = "From is required"
     else if (!body.message)
         error = "Message is required"
+    else if (!body.subject)
+        error = "Subject is required"
+    else if (!body.name)
+        error = "Name is required"
     return error
 }
 

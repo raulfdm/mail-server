@@ -1,11 +1,11 @@
 const mailConfig = require('../config/mail.config')
 
 class MailInfos {
-    constructor(from,subject,text) {
+    constructor(from,subject,text,name) {
         this._from = from
         this._to = mailConfig.user,
         this._subject = `${subject}`,
-        this._text = `Email From: ${from}\nMessage: ${text}`
+        this._message = `Name: ${name}\nEmail From: ${from}\nMessage: ${text}`
     }
 
     get from(){
@@ -26,7 +26,7 @@ class MailInfos {
             from: this._from,
             to: this._to,
             subject: this._subject,
-            text: this._text
+            text: this._message
         }
     }
 }
